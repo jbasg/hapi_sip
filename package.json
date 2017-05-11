@@ -1,0 +1,25 @@
+{
+  "name": "hapi-template",
+  "version": "1.0.0",
+  "description": "Hapi Web Server template for web server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbasg/hapi_template.git"
+  },
+  "author": "jbasg",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jbasg/hapi_template/issues"
+  },
+  "homepage": "https://github.com/jbasg/hapi_template#readme",
+  "dependencies": {
+    "hapi" :  "^16.1.0",
+    "inert" : "^4.2.0",
+    "faye" : " ^1.2.0"
+  }
+
+}

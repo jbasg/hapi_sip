@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="icon"  type="image/png" href="icons/gears.png">
+</head>
+
+<body>
+    <div class="container theme-showcase">
+        <div class="jumbotron">
+            <h1>Hapi Server Template</h1>
+            <p>Node server template with:</p>
+            <ul>
+                <li>Node</li>
+                    <ul>
+                        <li>Hapi</li>
+                        <li>Inert</li>
+                        <li>Faye</li>
+                    </ul>
+                <li>Html</li>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>Jquery</li>
+                        <li>KnockOut</li>
+                        <li>Vue</li>
+                        <li>Underscore</li>
+                    </ul>
+                </li>
+            <ul>
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <span data-bind="text : me " class="text-danger"></span>
+                <form data-bind="submit: send_message">
+                    say: <input data-bind="value: msg" placeholder="you say..." />
+                <button class="btn " type="submit">Send</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <table class="table table-condensed" data-bind="foreach: messages">
+                    <tr >
+                        <td>
+                            <span data-bind="text : user ,css :  $root.me() != user() ? 'text-info' : 'text-danger'" class="text-info"></span>
+                            :
+                            <span data-bind="text : msg">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div>Icons made by 
+            <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+             from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by 
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      </div>
+    </footer>
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="faye/client.js"></script>
+
+<!-- Local script -->
+    <script src="js/faye_sample.js"></script>
+</body>
+</html>
