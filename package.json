@@ -19,7 +19,9 @@
   "dependencies": {
     "hapi" :  "^16.1.0",
     "inert" : "^4.2.0",
-    "faye" : " ^1.2.0"
+    "faye" : " ^1.2.0",
+    "sip"  : "^0.0.3",
+    "ami-asterisk" : "0.1.1"
   }
 
 }
