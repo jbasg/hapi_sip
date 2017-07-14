@@ -1,12 +1,17 @@
 'use Static';
-
+/*!
+ *
+ *
+ *
+ */
 const Path = require('path');
 const Hapi = require('hapi');
 const Inert = require('inert');
 
 
 const Plugin_Base = require('./hapi_plugin_base_route');
-
+const Plugin_DataBase = require('./hapi_plugin_database_route');
+const Plugin_NamiBase = require('./hapi_plugin_nami_route');
 
 const HTTP_PORT = 4000;
 const HTTP_PATH = './public/';
@@ -31,11 +36,16 @@ if (FAYE_ENABLED){
     const faye = require('faye');
     const bayeux = new faye.NodeAdapter({mount: FAYE_PATH});
     bayeux.attach(server.listener);
+    server.app.faye = bayeux.getClient();
 }
+
+
 
 //REGISTERED PLUGINS
 server.register([     Inert
                     , Plugin_Base
+                    , Plugin_DataBase
+                    , Plugin_NamiBase
                 ], () => {});
 
 // Server Method Sample
